@@ -1,5 +1,6 @@
 import React from 'react'
 import BadButton from './BadButton'
+import GoodButton from './GoodButton'
 import Square from './Square'
 import '../style.css'
 
@@ -18,7 +19,8 @@ const Hocs = props => {
       </h1>
       <BadButton />
       <BadButton darkMode />
-      <Square />
+      <Square isLoggedIn={true} darkMode/>
+      <GoodButton onClick = {() => setLoggedIn(!isLoggedIn)} darkMode/>
     </section>
   )
 }
